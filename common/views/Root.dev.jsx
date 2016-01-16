@@ -17,7 +17,7 @@ class Root extends React.Component {
   render() {
     return (
       <div>
-        <Helmet titleTemplate="React Redux Starter Kit - %s" />
+        <Helmet titleTemplate="Profs To Pick - %s" />
 
         <Provider store={this.props.store}>
           <div>
