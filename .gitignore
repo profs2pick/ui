@@ -2,9 +2,7 @@
 .env
 
 # Logs
-logs
 *.log
-npm-debug.log
 .sass-cache
 
 Gemfile.lock
