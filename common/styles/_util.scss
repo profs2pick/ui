@@ -1,0 +1,119 @@
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin link-no-underscore() {
+  &, &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin text-ellipsis($max-width: 100%) {
+  display: inline-block;
+  overflow: hidden;
+  max-width: $max-width;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin drop-shadow($position: bottom) {
+  @if $position == top {
+    $position: -2px;
+  } @else {
+    $position: 2px;
+  }
+
+  box-shadow: 0px $position 4px 0px rgba(0,0,0,0.16);
+}
+
+// Responsive Utilities
+// Note: `xs` (breakpoint-xs) isn't supplied because
+// we're supposed to be implementing mobile-first practices
+// example:
+// @include breakpoint-sm() {
+//   color: red;
+// }
+@mixin breakpoint-sm() {
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md() {
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg() {
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl() {
+  @media (min-width: map-get($grid-breakpoints, xl)) {
+    @content;
+  }
+}
+
+// class utilities
+// sparingly use :)
+
+._clearfix {
+  @include clearfix;
+
+  ._left { float: left !important;}
+  ._right { float: right !important; }
+}
+
+._ellipsis {
+  @include text-ellipsis;
+
+  &.-expander:hover {
+    max-width: 10000px !important;
+  }
+}
+
+// Spacers
+._no-spacer { margin-bottom: 0 !important; }
+._spacer-small { margin-bottom: $spacer-small !important; }
+._spacer { margin-bottom: $spacer !important; }
+._spacer-large { margin-bottom: $spacer-large !important; }
+
+// Type
+._text-up { text-transform: uppercase !important; }
+._text-low { text-transform: lowercase !important; }
+._text-left { text-align: left !important; }
+._text-center { text-align: center !important; }
+._text-right { text-align: right !important; }
+
+// Text color variants
+._text-sky { color: $brand-sky; }
+._text-crimson { color: $brand-crimson; }
+._text-emerald { color: $brand-emerald; }
+._text-sun { color: $brand-sun; }
+._text-muted { color: $brand-gray-dk; }
+
+// Center block
+._centered {
+  display: block !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// Header bold
+._heading-bold {
+  font-weight: 600;
+}
