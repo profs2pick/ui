@@ -1,0 +1,18 @@
+.search-section {
+  padding-top: 50px;
+
+  .searchbar {
+    display: block;
+    padding: 0;
+    margin-bottom: $spacer;
+    font-size: 110px;
+    color: $color-gray;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  > .instructions {
+
+  }
+}
