@@ -31,9 +31,6 @@ npm test # open up localhost:9876 afterwards
 
 ## Configuration
 We use [dotenv](https://www.npmjs.com/package/dotenv-style) configuration.
-```bash
-cp .env.example .env
-```
 
 *Note*: If you don't have any `.env` file in the project root directory, run this: `cp .env.example .env`.
 
