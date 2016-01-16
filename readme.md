@@ -30,11 +30,12 @@ npm test # open up localhost:9876 afterwards
 ```
 
 ## Configuration
-This starter kit uses a [dotenv](https://www.npmjs.com/package/dotenv-style) configuration. To start, simply copy `.env.example` to `.env`.
+We use [dotenv](https://www.npmjs.com/package/dotenv-style) configuration.
 ```bash
 cp .env.example .env
 ```
-Afterwards, modify as it suits your needs.
+
+By convention, env configs are surrounded with underscores (`_`) when used throughout the application (e.g., `API` -> `_API_`). For more information, checkout `build/webpack.config.js`.
 
 #### `_ENV_`
 A global variable for `process.env.NODE_ENV`.
