@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: $brand-black;
+  background: $brand-white;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  @include proxima;
+}
+
+hr {
+  // @TODO
+  // Add margin for `hr`;
+  // tho, we can just add the utility class "_spacer"
+  border: 0;
+  border-top: 1px solid $brand-gray;
+}

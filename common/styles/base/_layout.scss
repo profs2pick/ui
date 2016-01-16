@@ -1,0 +1,90 @@
+@mixin make-container() {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  @include clearfix();
+}
+
+@mixin responsive-max-width() {
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    @media (min-width: $container-max-width) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+.container {
+  @include make-container();
+  @include responsive-max-width();
+}
+
+.container-fluid {
+  @include make-container();
+}
+
+.vtc-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &.-full {
+    height: 100vh;
+  }
+
+  &.-padded {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.narrow-container {
+  @include make-container();
+  width: 360px;
+}
+
+.row {
+  margin-left:  -($grid-gutter);
+  margin-right: -($grid-gutter);
+  @include clearfix();
+
+  // @see
+  // .row.-right;
+  // check on the column generation below.
+}
+
+
+// col-xs-12; col-md-12; col-sm-12
+@each $label, $breakpoint in $grid-breakpoints {
+  @for $i from 1 through $grid-columns {
+    .col-#{$label}-#{$i} {
+      position: relative;
+      min-height: 1px;
+      padding-left: $grid-gutter;
+      padding-right: $grid-gutter;
+
+      @media(min-width: $breakpoint) {
+        float: left;
+        width: percentage($i / $grid-columns);
+
+        /*
+         * Floats all columns to the right instaed of left (default).
+         * It is used to place the right (last-declared) column
+         * on top for responsive websites.
+         *
+         * @example
+         * <div class="row -right">
+         *   <div class="col-md-9"></div>
+         *   <div class="col-md-3"></div>
+         * </div>
+         *
+         * @TODO
+         * Needs refactoring
+         */
+        .row.-right > & {
+          float: right;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+@mixin btn-variant($local-bg, $local-color: $brand-white) {
+  color: $local-color;
+  background: $local-bg;
+
+  &:hover,
+  &:focus {
+    color: $local-color;
+    background: darken($local-bg, 5%);
+  }
+}
+
+@mixin btn-variant-inverted($color) {
+  background: transparent;
+  color: $color;
+  border-color: $color;
+
+  &:hover,
+  &:focus {
+    color: $brand-white;
+    background: $color;
+  }
+}
+
+.btn {
+  display: inline-block;
+  // Size
+  padding: 0 40px;
+  // Supposedly the same as above, but for some reason,
+  // Montserrat looks like it's not centered when it's
+  // the same values
+  height: 36px;
+  line-height: 36px;
+  font-size: $font-size-base;
+  border: 1px solid transparent;
+  border-radius: $border-radius-base;
+  outline: none; /* remove native outline */
+  cursor: pointer;
+  transition: 0.1s all;
+
+  // To center all items inside the button vertically
+  // See https://github.com/dev-onenetworkecommerce/aia/issues/84
+  & > * {
+    vertical-align: middle;
+  }
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.-default {
+    @include btn-variant($brand-white, $brand-black);
+    border: 1px solid $brand-gray;
+  }
+
+  &.-primary { @include btn-variant($brand-sidebar-lt); }
+  &.-sky { @include btn-variant($brand-sky); }
+  &.-emerald { @include btn-variant($brand-emerald); }
+  &.-crimson { @include btn-variant($brand-crimson); }
+  &.-link {
+    @include btn-variant(transparent, $brand-sky);
+
+    &:hover,
+    &:focus {
+      color: darken($brand-sky, 25%);
+      text-decoration: underline;
+      background: transparent;
+    }
+
+    &.-disabled,
+    &:disabled,
+    &.-disabled:hover,
+    &:disabled:hover {
+      background: transparent;
+      text-decoration: none;
+    }
+  }
+
+  &.-primary-link {
+    @include btn-variant($brand-white, $brand-sidebar-lt);
+    border: 1px solid $brand-gray;
+
+    &:hover,
+    &:focus {
+      color: $brand-white;
+      background: $brand-sidebar-lt;
+    }
+  }
+
+  &.-inverted.-default { @include btn-variant-inverted($brand-gray); }
+  &.-inverted.-primary { @include btn-variant-inverted($brand-sidebar-lt); }
+  &.-inverted.-sky { @include btn-variant-inverted($brand-sky); }
+  &.-inverted.-emerald { @include btn-variant-inverted($brand-emerald); }
+  &.-inverted.-crimson { @include btn-variant-inverted($brand-crimson); }
+
+  &.-disabled,
+  &:disabled,
+  &.-disabled:hover,
+  &:disabled:hover {
+    color: lighten($brand-black, 20%);
+    background: $brand-gray;
+  }
+
+  &.-block {
+    display: block;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  &.-xs {
+    padding: 0 15px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  &.-small {
+    padding: 0 20px;
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px;
+  }
+
+  &.-large {
+    padding: 0 45px;
+    height: 45px;
+    font-size: 20px;
+    line-height: 45px;
+  }
+
+  &.-large > .icon:first-child {
+    margin-right: $padding-x-large;
+  }
+
+  &.-large > .icon:last-child {
+    margin-left: $padding-x-large;
+  }
+
+  &.-rounded {
+    border-radius: $border-radius-rounded;
+  }
+
+  &.-disabled,
+  &:disabled {
+    cursor: not-allowed;
+    border: 0;
+    background-color: $brand-gray-lt;
+    color: $brand-gray;
+  }
+
+  > .icon:first-child {
+    margin-right: ($padding-x / 2);
+  }
+
+  > .icon:last-child {
+    margin-left: ($padding-x / 2);
+  }
+
+  > .icon:first-child:last-child {
+    margin: 0;
+  }
+}
+
+.btn-group {
+  display: inline-block;
+  vertical-align: middle;
+
+  &.-rounded > .btn {
+    border-radius: $border-radius-rounded;
+  }
+
+  &.-xs > .btn {
+    @extend .btn.-xs;
+  }
+
+  &.-small > .btn {
+    @extend .btn.-small;
+  }
+
+  &.-large > .btn {
+    @extend .btn.-large;
+  }
+
+  + .btn-group {
+    margin-left: ($padding-x / 2);
+  }
+
+  > .btn:last-child:not(:first-child) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  > .btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  > .btn:not(:first-child):not(:last-child) {
+    margin-left: -1px;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,46 @@
+@mixin proxima() {
+  font-family: "proxima-nova", Helvetica, "Helvetica Neue", sans-serif, serif;
+}
+
+@mixin proxima-bold() {
+  font-weight: 600;
+}
+
+// for typography, mostly
+@mixin vertical-rhythm() {
+  margin-top: 0;
+  margin-bottom: ($spacer-large);
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote {
+  @include vertical-rhythm;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+small { font-size: 90%; }
+
+a {
+  color: $brand-sky-dk;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.lead {
+  font-size: 20px;
+  font-weight: 300;
+  color: $brand-gray-dk;
+}
