@@ -15,7 +15,7 @@
     "prewatch": "npm run make-app-symlink",
     "postinstall": "npm run make-app-symlink",
     "prebuild": "npm run make-app-symlink",
-    "dev": "open public/index.html && npm-run-all --parallel watch:script watch:style",
+    "dev": "npm-run-all --parallel watch:script watch:style",
     "start": "npm run build:style && npm run prod:script && npm run server"
   },
   "author": "Kier Borromeo <seraphipod@gmail.com> (http://srph.github.io)",
