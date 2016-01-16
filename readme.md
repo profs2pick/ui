@@ -68,16 +68,6 @@ The variable to check if the environment is node. This is safer than deriving by
 
 This is explicitly set to each config (e.g., server globals, webpack config).
 
-#### `_IMG_`
-Path to your images folder.
-
-This can be used as such : ````${_IMG_}/cat.jpg````.
-
-#### `_SSR_`
-The variable to check if the environment is node. This is safer than deriving by checking variables available only to node.
-
-This is explicitly set to each config (e.g., server globals, webpack config).
-
 ## Tests
 - Files are named as `filename.spec.js`.
 - Place test files on the same directory as file being tested.
