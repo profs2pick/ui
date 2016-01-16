@@ -35,6 +35,8 @@ We use [dotenv](https://www.npmjs.com/package/dotenv-style) configuration.
 cp .env.example .env
 ```
 
+*Note*: If you don't have any `.env` file in the project root directory, run this: `cp .env.example .env`.
+
 By convention, env configs are surrounded with underscores (`_`) when used throughout the application (e.g., `API` -> `_API_`). For more information, checkout `build/webpack.config.js`.
 
 #### `_ENV_`

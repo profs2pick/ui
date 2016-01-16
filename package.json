@@ -14,7 +14,7 @@
     "make-app-symlink": "cd node_modules && ln -nsf ../ admin-ui",
     "prewatch": "npm run make-app-symlink",
     "postinstall": "npm run make-app-symlink",
-    "prebuild": "npm run make-app-symlink",
+    "prebuild": "cp .env.example .env && npm run make-app-symlink",
     "dev": "npm-run-all --parallel watch:script watch:style",
     "start": "npm run build:style && npm run prod:script && npm run server"
   },
