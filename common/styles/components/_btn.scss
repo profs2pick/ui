@@ -24,11 +24,7 @@
 .btn {
   @include link-no-underscore;
   display: inline-block;
-  // Size
   padding: 10px 16px;
-  // Supposedly the same as above, but for some reason,
-  // Montserrat looks like it's not centered when it's
-  // the same values
   line-height: 1; // Reset line-height
   font-size: $font-size-base;
   border: 1px solid transparent;
