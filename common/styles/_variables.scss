@@ -1,6 +1,49 @@
 $brand-white: #fff;
 $brand-black: #000;
 $brand-gray: #ddd;
+$brand-link: #4684BF; // Link color
+
+$line-height-base: 1.7;
 
 $font-size-base: 14px;
-$line-height-base: 1.7;
+$font-size-h1: 30px;
+$font-size-h2: 26px;
+$font-size-h3: 22px;
+$font-size-h4: 18px;
+$font-size-h5: 14px;
+$font-size-h6: 14px;
+$font-size-small: 12px;
+
+// Grid
+$grid-columns: 12 !default;
+// space between each column
+$grid-gutter: 10px !default;
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_grid-framework.scss
+$grid-breakpoints: (
+  xs: 0, // Extra small screen / phone
+  sm: 34em, // Small screen / phone
+  md: 48em, // Medium screen / tablet
+  lg: 62em, // Large screen / desktop
+  xl: 75em// Extra large screen / wide desktop
+) !default;
+$container-max-widths: (
+  sm: 34rem,    // 480
+  md: 45rem,    // 720
+  lg: 60rem,    // 960
+  xl: 72.25rem  // 1140
+) !default;
+
+$border-radius-base: 6px;
+$border-radius-rounded: 25px;
+
+$form-size: 34px; // basic form height
+$padding-y: 6px !default;
+$padding-y-small: 5px !default;
+$padding-y-large: 10px !default;
+$padding-x: 12px !default;
+$padding-x-small: 10px !default;
+$padding-x-large: 16px !default;
+
+$spacer-small: 15px;
+$spacer: 25px;
+$spacer-large: 50px;

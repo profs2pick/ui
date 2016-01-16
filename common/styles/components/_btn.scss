@@ -53,45 +53,10 @@
     border: 1px solid $brand-gray;
   }
 
-  &.-primary { @include btn-variant($brand-sidebar-lt); }
+/*   &.-primary { @include btn-variant($brand-sidebar-lt); }
   &.-sky { @include btn-variant($brand-sky); }
   &.-emerald { @include btn-variant($brand-emerald); }
-  &.-crimson { @include btn-variant($brand-crimson); }
-  &.-link {
-    @include btn-variant(transparent, $brand-sky);
-
-    &:hover,
-    &:focus {
-      color: darken($brand-sky, 25%);
-      text-decoration: underline;
-      background: transparent;
-    }
-
-    &.-disabled,
-    &:disabled,
-    &.-disabled:hover,
-    &:disabled:hover {
-      background: transparent;
-      text-decoration: none;
-    }
-  }
-
-  &.-primary-link {
-    @include btn-variant($brand-white, $brand-sidebar-lt);
-    border: 1px solid $brand-gray;
-
-    &:hover,
-    &:focus {
-      color: $brand-white;
-      background: $brand-sidebar-lt;
-    }
-  }
-
-  &.-inverted.-default { @include btn-variant-inverted($brand-gray); }
-  &.-inverted.-primary { @include btn-variant-inverted($brand-sidebar-lt); }
-  &.-inverted.-sky { @include btn-variant-inverted($brand-sky); }
-  &.-inverted.-emerald { @include btn-variant-inverted($brand-emerald); }
-  &.-inverted.-crimson { @include btn-variant-inverted($brand-crimson); }
+  &.-crimson { @include btn-variant($brand-crimson); } */
 
   &.-disabled,
   &:disabled,
@@ -146,7 +111,7 @@
   &:disabled {
     cursor: not-allowed;
     border: 0;
-    background-color: $brand-gray-lt;
+    background-color: $brand-gray;
     color: $brand-gray;
   }
 
@@ -160,46 +125,5 @@
 
   > .icon:first-child:last-child {
     margin: 0;
-  }
-}
-
-.btn-group {
-  display: inline-block;
-  vertical-align: middle;
-
-  &.-rounded > .btn {
-    border-radius: $border-radius-rounded;
-  }
-
-  &.-xs > .btn {
-    @extend .btn.-xs;
-  }
-
-  &.-small > .btn {
-    @extend .btn.-small;
-  }
-
-  &.-large > .btn {
-    @extend .btn.-large;
-  }
-
-  + .btn-group {
-    margin-left: ($padding-x / 2);
-  }
-
-  > .btn:last-child:not(:first-child) {
-    margin-left: -1px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  > .btn:first-child:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  > .btn:not(:first-child):not(:last-child) {
-    margin-left: -1px;
-    border-radius: 0;
   }
 }
