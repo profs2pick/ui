@@ -6,6 +6,7 @@ require('dotenv').load({ path: __dirname + '/../../.env' });
 
 module.exports = {
   module: {
+    noParse: [/node_modules\/sinon\//], // https://github.com/airbnb/enzyme/issues/47
     loaders: [{
       test: /\.(js|jsx|es6)$/,
       exclude: /node_modules/,
@@ -13,7 +14,8 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.json', '.jsx', '.es6']
+    extensions: ['', '.js', '.json', '.jsx', '.es6'],
+    alias: { sinon: 'sinon/pkg/sinon' } // // https://github.com/airbnb/enzyme/issues/47
   },
   plugins: [
     new webpack.DefinePlugin({
