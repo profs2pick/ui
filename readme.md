@@ -84,7 +84,7 @@ This is explicitly set to each config (e.g., server globals, webpack config).
 - However, if a directory contains several test files, place it in their respective `__tests__` folder.
 
 ## Alias
-- Use `admin-ui/*` (e.g., `import 'admin-ui/some-file.js') for directories that are two levels away (`../../module/some-file` => `admin-ui/module/some-file`)
+- Use `app/*` (e.g., `import 'app/some-file.js') for directories that are two levels away (`../../module/some-file` => `app/module/some-file`)
 
 ## Routing
 - Use `.` to signify a nest in route (e.g., `dashboard.home`)
@@ -94,3 +94,4 @@ This is explicitly set to each config (e.g., server globals, webpack config).
 
 ## 101
 - This repository follows [ducks-modular-redux](https://github.com/erikras/ducks-modular-redux).
+
