@@ -31,5 +31,13 @@ module.exports = {
     })
   ],
   // https://github.com/webpack/karma-webpack#source-maps
-  devtool: 'inline-source-map'
+  devtool: 'inline-source-map',
+  // https://github.com/airbnb/enzyme/issues/47
+  externals: {
+    jsdom: 'window',
+    cheerio: 'window',
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': 'window',
+    'text-encoding': 'window'
+  }
 };
