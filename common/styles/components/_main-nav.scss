@@ -1,4 +1,11 @@
 .main-nav {
-  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  height: 60px;
   background: $brand-white;
+
+  div:last-child {
+    margin-left: auto;
+  }
 }
