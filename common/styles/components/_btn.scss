@@ -1,4 +1,4 @@
-@mixin btn-variant($local-bg, $local-color: $brand-white) {
+@mixin btn-variant($local-bg, $local-color: $color-white) {
   color: $local-color;
   background: $local-bg;
 
@@ -16,7 +16,7 @@
 
   &:hover,
   &:focus {
-    color: $brand-white;
+    color: $color-white;
     background: $color;
   }
 }
@@ -49,21 +49,21 @@
   }
 
   &.-default {
-    @include btn-variant($brand-white, $brand-black);
-    border: 1px solid $brand-gray;
+    @include btn-variant($color-white, $color-black);
+    border: 1px solid $color-gray;
   }
 
-/*   &.-primary { @include btn-variant($brand-sidebar-lt); }
-  &.-sky { @include btn-variant($brand-sky); }
-  &.-emerald { @include btn-variant($brand-emerald); }
-  &.-crimson { @include btn-variant($brand-crimson); } */
+/*   &.-primary { @include btn-variant($color-sidebar-lt); }
+  &.-sky { @include btn-variant($color-sky); }
+  &.-emerald { @include btn-variant($color-emerald); }
+  &.-crimson { @include btn-variant($color-crimson); } */
 
   &.-disabled,
   &:disabled,
   &.-disabled:hover,
   &:disabled:hover {
-    color: lighten($brand-black, 20%);
-    background: $brand-gray;
+    color: lighten($color-black, 20%);
+    background: $color-gray;
   }
 
   &.-block {
@@ -111,8 +111,8 @@
   &:disabled {
     cursor: not-allowed;
     border: 0;
-    background-color: $brand-gray;
-    color: $brand-gray;
+    background-color: $color-gray;
+    color: $color-gray;
   }
 
   > .icon:first-child {

@@ -6,8 +6,8 @@
 }
 
 body {
-  color: $brand-black;
-  background: $brand-white;
+  color: $color-black;
+  background: $color-white;
   font-size: $font-size-base;
   line-height: $line-height-base;
   @include proxima;
@@ -18,5 +18,5 @@ hr {
   // Add margin for `hr`;
   // tho, we can just add the utility class "_spacer"
   border: 0;
-  border-top: 1px solid $brand-gray;
+  border-top: 1px solid $color-gray;
 }
