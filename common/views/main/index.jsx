@@ -5,7 +5,11 @@ export default class Main extends React.Component {
     return (
       <div>
         <div className="main-nav">
-          <div></div>
+          <div>
+            <a href="#" className="link -active">Home</a>
+            <a href="#" className="link">Professors</a>
+            <a href="#" className="link">Universities</a>
+          </div>
 
           <div>
           </div>
