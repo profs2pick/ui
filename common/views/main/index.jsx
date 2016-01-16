@@ -12,6 +12,7 @@ export default class Main extends React.Component {
           </div>
 
           <div>
+            <a href="#" className="btn -default">Submit Rating</a>
           </div>
         </div>
 

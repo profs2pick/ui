@@ -22,17 +22,17 @@
 }
 
 .btn {
+  @include link-no-underscore;
   display: inline-block;
   // Size
-  padding: 0 40px;
+  padding: 10px 16px;
   // Supposedly the same as above, but for some reason,
   // Montserrat looks like it's not centered when it's
   // the same values
-  height: 36px;
-  line-height: 36px;
+  line-height: 1; // Reset line-height
   font-size: $font-size-base;
   border: 1px solid transparent;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius-rounded;
   outline: none; /* remove native outline */
   cursor: pointer;
   transition: 0.1s all;
@@ -41,11 +41,6 @@
   // See https://github.com/dev-onenetworkecommerce/aia/issues/84
   & > * {
     vertical-align: middle;
-  }
-
-  &,
-  &:hover {
-    text-decoration: none;
   }
 
   &.-default {
@@ -101,10 +96,6 @@
 
   &.-large > .icon:last-child {
     margin-left: $padding-x-large;
-  }
-
-  &.-rounded {
-    border-radius: $border-radius-rounded;
   }
 
   &.-disabled,
