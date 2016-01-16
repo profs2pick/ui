@@ -9,18 +9,6 @@
   }
 }
 
-@mixin btn-variant-inverted($color) {
-  background: transparent;
-  color: $color;
-  border-color: $color;
-
-  &:hover,
-  &:focus {
-    color: $color-white;
-    background: $color;
-  }
-}
-
 .btn {
   @include link-no-underscore;
   display: inline-block;
@@ -43,11 +31,6 @@
     @include btn-variant($color-white, $color-black);
     border: 1px solid $color-gray;
   }
-
-/*   &.-primary { @include btn-variant($color-sidebar-lt); }
-  &.-sky { @include btn-variant($color-sky); }
-  &.-emerald { @include btn-variant($color-emerald); }
-  &.-crimson { @include btn-variant($color-crimson); } */
 
   &.-disabled,
   &:disabled,
