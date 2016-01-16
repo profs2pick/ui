@@ -1,5 +1,5 @@
-# react-redux-starter-kit
-An opinionated react+redux starter kit.
+# profs2pick-ui
+The web client for **Profs To Pick**.
 
 ## Libraries
 **Mainly**:
