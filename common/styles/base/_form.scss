@@ -101,6 +101,8 @@ label {
 
   .addon {
     position: absolute;
+    text-align: center;
+    width: 40px; // Size of the icon
   }
 
   .addon:first-child {
