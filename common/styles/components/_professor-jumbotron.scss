@@ -1,0 +1,39 @@
+.professor-jumbotron {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: $color-gray-light;
+
+  .inner {
+    @include make-container;
+    width: 640px;
+  }
+
+  .inner > * {
+    line-height: 1;
+  }
+
+  .inner > .name {
+    @include proxima-bold;
+  }
+
+  .inner > .name {
+    margin-bottom: 10px;
+  }
+
+  .inner > .field {
+    margin-bottom: 5px;
+  }
+
+  .inner > .field,
+  .inner > .university {
+    color: $color-gray;
+  }
+
+  .inner > .university {
+    margin-bottom: 20px;
+  }
+
+  .inner > .avatar {
+    float: right;
+  }
+}

@@ -1,0 +1,187 @@
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 8px;
+  vertical-align: middle;
+  background-color: $color-white;
+  border: 1px solid $color-black;
+  border-radius: $border-radius-base;
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.075);
+
+  &:focus {
+    border-color: $color-blue;
+  }
+
+  &.-disabled,
+  &:disabled {
+    color: $color-gray;
+    border-color: $color-gray-light;
+    background: $color-gray-light;
+    cursor: not-allowed;
+  }
+
+  &.-red,
+  &.-red:focus {
+    border-color: $color-red;
+  }
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group .form-control + .message {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  z-index: 9999;
+  max-width: 220px;
+  padding: 10px 15px;
+  line-height: 1;
+  font-size: $font-size-small;
+  text-align: center;
+  color: $color-white;
+  background: $color-red;
+  border-radius: 5px;
+}
+
+.form-group .form-control + .message:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 5%;
+  border-bottom: 8px solid $color-red;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.form-group .form-control:hover + .message,
+.form-group .form-control:focus + .message {
+  visibility: visible;
+}
+
+
+.form-group .form-control + .message.-top {
+  bottom: 40px;
+  top: -40px;
+}
+
+.form-group .form-control + .message.-top:after {
+  top: 100%;
+  border-top: 8px solid $color-red;
+  border-bottom: none;
+}
+
+.form-group .form-control:hover + .message.-top,
+.form-group .form-control:focus + .message.-top {
+ visibility: visible;
+}
+
+
+// fix issue with <select> padding
+select.form-control {
+  height: 34px;
+}
+
+label {
+  width: 100%;
+  display: inline-block;
+}
+
+// form containers
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+
+  > .form-control:first-child,
+  > .addon:first-child,
+  > .addon.-btn:first-child > .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  > .form-control:last-child,
+  > .form-control:not(:first-child):not(:last-child),
+  > .addon:last-child,
+  > .addon.-btn:last-child > .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  > .addon:not(:first-child):not(:last-child),
+  > .addon:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
+  }
+
+  > .form-control,
+  > .addon {
+    display: table-cell;
+  }
+
+  > .form-control {
+    z-index: 2;
+    float: left;
+    width: 100%;
+  }
+  > .form-control:first-child {
+    border-right: none;
+  }
+
+  > .form-control:last-child {
+    border-left: none;
+  }
+
+  > .addon {
+    z-index: 1;
+    width: 1%;
+    min-height: $form-size;
+    vertical-align: middle;
+    padding: 0 8px;
+    border: 1px solid $color-black;
+    color: $color-black;
+    background-color: $color-white;
+    border-radius: $border-radius-base;
+  }
+
+  > .addon:first-child {
+    border-right: 0;
+  }
+
+  > .addon:last-child {
+    border-left: 0;
+  }
+
+  > .addon.-btn {
+    padding: 0;
+  }
+
+  > .addon .btn {
+    height: 32px;
+    line-height: 32px;
+  }
+
+  > .addon.-btn > .btn {
+    border-radius: 2px;
+    margin-right: -0.5px;
+  }
+
+  > .icon-search {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.form-actions {
+  > *:not(:last-child) {
+    margin-right: $padding-x;
+  }
+}
