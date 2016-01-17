@@ -104,23 +104,26 @@ label {
   }
 
   .btn:first-child {
-    left: 0;
+    left: 5px;
   }
 
   .btn:last-child {
-    right: 0;
+    right: 5px;
   }
 
+  // Make btn simple
   .btn {
-    width: 30px; // Size of the icon
+    padding: 0;
+    width: 30px; // Size of the icon - allowance
+    background: none;
   }
 
   .form-control:first-child {
-    padding-right: 30px; // Size of the icon
+    padding-right: 36px; // Size of the icon + allowance
   }
 
   .form-control:last-child {
-    padding-left: 30px; // Size of the icon
+    padding-left: 36px; // Size of the icon + allowance
   }
 }
 

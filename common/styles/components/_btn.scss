@@ -13,6 +13,7 @@
   @include link-no-underscore;
   display: inline-block;
   padding: 10px 16px;
+  min-height: $form-size;
   line-height: 1; // Reset line-height
   font-size: $font-size-base;
   border: 1px solid transparent;
