@@ -99,26 +99,28 @@ label {
   position: relative;
   width: 100%;
 
-  .addon {
+  .btn {
     position: absolute;
-    text-align: center;
-    width: 40px; // Size of the icon
   }
 
-  .addon:first-child {
+  .btn:first-child {
     left: 0;
   }
 
-  .addon:last-child {
+  .btn:last-child {
     right: 0;
   }
 
+  .btn {
+    width: 30px; // Size of the icon
+  }
+
   .form-control:first-child {
-    padding-right: 40px; // Size of the icon
+    padding-right: 30px; // Size of the icon
   }
 
   .form-control:last-child {
-    padding-left: 40px; // Size of the icon
+    padding-left: 30px; // Size of the icon
   }
 }
 

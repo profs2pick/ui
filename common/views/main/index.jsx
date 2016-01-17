@@ -15,7 +15,7 @@ export default class Main extends React.Component {
             <div className="searchbar">
               <form>
                 <div className="input-group">
-                  <span className="addon"><button className="btn -simple">+</button></span>
+                  <button className="btn -simple">+</button>
                   <input type="search" className="form-control" />
                 </div>
               </form>
