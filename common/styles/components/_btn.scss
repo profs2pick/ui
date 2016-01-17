@@ -27,6 +27,13 @@
     vertical-align: middle;
   }
 
+  &.-simple {
+    padding-left: 0;
+    padding-right: 0;
+    background: none;
+    border: 0;
+  }
+
   &.-default {
     @include btn-variant($color-white, $color-black);
     border: 1px solid $color-gray;

@@ -6,20 +6,25 @@
   background: $color-white;
   border-bottom: 1px solid $color-gray;
 
-  div {
+  .nav {
     @include clearfix;
   }
 
-  div > * {
+  .nav > * {
     float: left;
+    margin-right: 10px;
   }
 
-  div:last-child {
+  .nav > *:last-child {
+    margin-right: 0; //
+  }
+
+  .nav:last-child {
     margin-left: auto;
   }
 
   // Cancel the rule above
-  div:first-child:last-child {
+  .nav:first-child:last-child {
     margin-left: initial;
   }
 
@@ -52,5 +57,19 @@
 
   .link.-active::before {
     background: $color-black;
+  }
+
+  /**
+   * @example
+   <div className="nav">
+    <div className="searchbar">
+      <form>
+        <input text="search" className="form-control">
+      </form>
+    </div>
+  </div>
+   */
+  .searchbar {
+    width: 250px;
   }
 }

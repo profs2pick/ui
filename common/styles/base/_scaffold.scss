@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  // because the other rules don't make any sense.
+  box-sizing: border-box !important;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
