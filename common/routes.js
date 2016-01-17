@@ -10,7 +10,7 @@ export default (
   <Route path="/" component={MainView}>
     <IndexRoute component={MainHomeView} />
     <Route path="search" component={MainSearchView} />
-    <Route path="professor/:id" component={MainProfessorView} />
+    <Route path="professors/:id" component={MainProfessorView} />
     <Route path="rate" component={MainRateView} />
   </Route>
 );
