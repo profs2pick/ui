@@ -16,7 +16,7 @@ export default class Main extends React.Component {
               <form>
                 <div className="input-group">
                   <button className="btn -simple">+</button>
-                  <input type="search" className="form-control" />
+                  <input type="search" className="form-control" placeholder="Search..." />
                 </div>
               </form>
             </div>
