@@ -13,21 +13,15 @@ bundle install
 ```
 
 ## Development
-```bash
-npm run start # runs build script, style, and server
-
-# opens index file, watches / builds assets
-npm run dev
-
-# run server-side rendering
-npm run server
-
-# production-ready assets / run server
-npm start
-
-# run tests
-npm test # open up localhost:9876 afterwards
-```
+|command|description|
+|----|----|
+|`npm run watch:script`|watch for file changes and compile scripts|
+|`npm run watch:style`|watch for file changes and compile stylesheets|
+|`npm run dev`|runs `watch:script` and `watch:style`|
+|`npm run server`|run server-side rendering|
+|`npm start`|production-ready assets / run server|
+|`npm watch:test`|watches for file changes and runs test|
+|`npm test`|run tests|
 
 ## Configuration
 We use [dotenv](https://www.npmjs.com/package/dotenv-style) configuration.
