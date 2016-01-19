@@ -40,6 +40,15 @@ By convention, env configs are surrounded with underscores (`_`) when used throu
 |`_PORT_`|The port which the server will be ran. This is a server-only config.|
 |`_REDUX_DEVTOOLS_`|Condition which Redux Devtools will be enabled.|
 
+**Gotchas**: To set a config to false, [leave it empty](https://github.com/motdotla/dotenv/issues/74#issuecomment-113287892).
+```bash
+# wrong
+REDUX_DEVTOOLS=false
+
+# correct
+REDUX_DEVTOOLS=
+```
+
 ## Tests
 - Files are named as `filename.spec.js`.
 - Place test files on the same directory as file being tested.
