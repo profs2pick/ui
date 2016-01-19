@@ -21,7 +21,10 @@ export default class Main extends React.Component {
               </form>
             </div>
 
-            <a href="#" className="btn -default">Submit Rating</a>
+            <a href="#" className="btn -default">
+              <i className="fa fa-plus" />
+              Submit Rating
+            </a>
           </div>
         </nav>
 
