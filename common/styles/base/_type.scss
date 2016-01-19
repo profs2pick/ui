@@ -9,7 +9,7 @@
 // for typography, mostly
 @mixin vertical-rhythm() {
   margin-top: 0;
-  margin-bottom: ($spacer-large);
+  margin-bottom: ($spacer / 2);
 }
 
 h1, h2, h3, h4, h5, h6,
