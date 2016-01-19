@@ -77,11 +77,11 @@
     line-height: 45px;
   }
 
-  &.-large > .icon:first-child {
+  &.-large > .fa:first-child {
     margin-right: $padding-x-large;
   }
 
-  &.-large > .icon:last-child {
+  &.-large > .fa:last-child {
     margin-left: $padding-x-large;
   }
 
@@ -93,15 +93,15 @@
     color: $color-gray;
   }
 
-  > .icon:first-child {
+  > .fa:first-child {
     margin-right: ($padding-x / 2);
   }
 
-  > .icon:last-child {
+  > .fa:last-child {
     margin-left: ($padding-x / 2);
   }
 
-  > .icon:first-child:last-child {
+  > .fa:first-child:last-child {
     margin: 0;
   }
 }
