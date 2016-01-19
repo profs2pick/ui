@@ -70,14 +70,14 @@
 // class utilities
 // sparingly use :)
 
-._clearfix {
+.u-clearfix {
   @include clearfix;
 
-  ._left { float: left !important;}
-  ._right { float: right !important; }
+  .u-left { float: left !important;}
+  .u-right { float: right !important; }
 }
 
-._ellipsis {
+.u-ellipsis {
   @include text-ellipsis;
 
   &.-expander:hover {
@@ -86,27 +86,27 @@
 }
 
 // Spacers
-._no-spacer { margin-bottom: 0 !important; }
-._spacer-small { margin-bottom: $spacer-small !important; }
-._spacer { margin-bottom: $spacer !important; }
-._spacer-large { margin-bottom: $spacer-large !important; }
+.u-no-spacer { margin-bottom: 0 !important; }
+.u-spacer-small { margin-bottom: $spacer-small !important; }
+.u-spacer { margin-bottom: $spacer !important; }
+.u-spacer-large { margin-bottom: $spacer-large !important; }
 
 // Type
-._text-up { text-transform: uppercase !important; }
-._text-low { text-transform: lowercase !important; }
-._text-left { text-align: left !important; }
-._text-center { text-align: center !important; }
-._text-right { text-align: right !important; }
+.u-text-up { text-transform: uppercase !important; }
+.u-text-low { text-transform: lowercase !important; }
+.u-text-left { text-align: left !important; }
+.u-text-center { text-align: center !important; }
+.u-text-right { text-align: right !important; }
 
 // Text color variants
-/* ._text-sky { color: $brand-sky; }
-._text-crimson { color: $brand-crimson; }
-._text-emerald { color: $brand-emerald; }
-._text-sun { color: $brand-sun; }
-._text-muted { color: $brand-gray-dk; } */
+/* .u-text-sky { color: $brand-sky; }
+.u-text-crimson { color: $brand-crimson; }
+.u-text-emerald { color: $brand-emerald; }
+.u-text-sun { color: $brand-sun; }
+.u-text-muted { color: $brand-gray-dk; } */
 
 // Center block
-._centered {
+.u-centered {
   display: block !important;
   float: none !important;
   margin-left: auto !important;
@@ -114,6 +114,6 @@
 }
 
 // Header bold
-._heading-bold {
+.u-heading-bold {
   font-weight: 600;
 }
