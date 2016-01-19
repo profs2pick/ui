@@ -1,0 +1,25 @@
+.review-card {
+  > .body {
+    padding: 20px;
+    font-size: $font-size-small;
+    letter-spacing: 0.25px;
+    background: $color-gray-light;
+  }
+
+  > .meta {
+    padding: 20px;
+    background: $color-gray;
+  }
+
+  > .meta > .info {
+    //
+  }
+
+  > .meta > .info > label {
+
+  }
+
+  > .meta > .info > p {
+    margin-bottom: 0;
+  }
+}

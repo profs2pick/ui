@@ -19,7 +19,7 @@ class MainProfessorView extends React.Component {
         </div>
 
         <div className="container" style={{ width: 640 }}>
-          <div className="rate-box">
+          <div className="rate-box u-spacer">
             <div className="average">4.2</div>
             <div className="attributelist">
               <div className="attribute">
@@ -35,6 +35,25 @@ class MainProfessorView extends React.Component {
               <div className="attribute">
                 <h6 className="name">Easiness</h6>
                 <h4 className="score">3.0</h4>
+              </div>
+            </div>
+          </div>
+
+          <h5 className="u-text-up u-heading-bold">Reviews</h5>
+
+          <div className="review-card">
+            <div className="body">
+              <p>A perfectly legit page full of headers with IDs and the content
+              between them. Note the ID's. They are unique, as any good ID ought to be.
+              This is required because it gives us a link target.</p>
+
+              <a href="#" className="permalink">2 days ago</a>
+            </div>
+
+            <div className="meta">
+              <div className="info">
+                <label>University</label>
+                <p>Pamantasan ng Lungsod ng Maynila</p>
               </div>
             </div>
           </div>
