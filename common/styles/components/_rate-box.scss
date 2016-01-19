@@ -1,0 +1,47 @@
+.rate-box {
+  display: flex;
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+
+  > .average {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+    width: 40%;
+    font-size: 80px;
+  }
+
+  > .attributelist {
+    width: 60%;
+    order: 2;
+  }
+
+  > .attributelist > .attribute {
+    @include clearfix;
+    margin-bottom: $spacer;
+  }
+
+  > .attributelist > .attribute:last-child {
+    margin-bottom: 0;
+  }
+
+  // since both elements are headings,
+  // explicitly add rule to both elements
+  // instead of its parent element
+  // to protect element-specific styling
+  > .attributelist > .attribute > .name,
+  > .attributelist > .attribute > .score {
+    margin-bottom: 0; // remove default heading margin
+
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  > .attributelist > .attribute > .name {
+    float: left;
+  }
+
+  > .attributelist > .attribute > .score {
+    float: right;
+  }
+}

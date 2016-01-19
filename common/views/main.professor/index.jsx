@@ -17,6 +17,28 @@ class MainProfessorView extends React.Component {
             </div>
           </div>
         </div>
+
+        <div className="container" style={{ width: 640 }}>
+          <div className="rate-box">
+            <div className="average">4.2</div>
+            <div className="attributelist">
+              <div className="attribute">
+                <h6 className="name">Helpfulness</h6>
+                <h4 className="score">4.0</h4>
+              </div>
+
+              <div className="attribute">
+                <h6 className="name">Clarity</h6>
+                <h4 className="score">5.0</h4>
+              </div>
+
+              <div className="attribute">
+                <h6 className="name">Easiness</h6>
+                <h4 className="score">3.0</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
