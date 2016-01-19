@@ -32,12 +32,12 @@ By convention, env configs are surrounded with underscores (`_`) when used throu
 
 |config|description|
 |----|----|
-|`_ENV_`|A global variable for `process.env.NODE_ENV`.
-|`_PRODUCTION_`|`true` when `process.env.NODE_ENV` is set to `production`.
-|`_DEV_`|`true` when `process.env.NODE_ENV` is **not** set to `production`.
+|`_ENV_`|A global variable for `process.env.NODE_ENV`.|
+|`_PRODUCTION_`|`true` when `process.env.NODE_ENV` is set to `production`.|
+|`_DEV_`|`true` when `process.env.NODE_ENV` is **not** set to `production`.|
 |`_API_`|The URI of the API. Mainly used to concatenate the requests with a base URI in `common/utils/axios/interceptors/concatBaseUrl`.|
 |`_IMG_`|Path to the images folder. This can be used as such : ````${_IMG_}/cat.jpg````.|
-|`_PORT_`|The port which the server will be ran. This is a server-only config.
+|`_PORT_`|The port which the server will be ran. This is a server-only config.|
 |`_REDUX_DEVTOOLS_`|Condition which Redux Devtools will be enabled.|
 
 ## Tests
