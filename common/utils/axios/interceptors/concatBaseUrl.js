@@ -7,7 +7,7 @@ const isAbsoluteURLRegex = /^(?:\w+:)\/\//;
 axios.interceptors.request.use((config) => {
   // Concatenate base path if not a base url
   if ( !isAbsoluteURLRegex.test(config.url) ) {
-    config.url = join(_API_, config.url);
+    config.url = join(process.env.API, config.url);
   }
 
   return config;
