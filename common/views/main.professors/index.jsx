@@ -12,8 +12,15 @@ class MainProfessorView extends React.Component {
             <h4 className="university">MMC-Cast</h4>
 
             <div className="form-actions">
-              <a href="#" className="btn -default">Submit Review</a>
-              <a href="#" className="btn -default">Share</a>
+              <a href="#" className="btn -default">
+                <i className="fa fa-plus" />
+                Submit Review
+              </a>
+
+              <a href="#" className="btn -default">
+                <i className="fa fa-share" />
+                Share
+              </a>
             </div>
           </div>
         </div>
