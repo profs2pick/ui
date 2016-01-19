@@ -1,4 +1,4 @@
 require('babel-register');
 require('babel-polyfill');
-require('./env');
+require('dotenv').load({ path: __dirname + '/../.env' });
 require('./server');
