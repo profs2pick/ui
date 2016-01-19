@@ -36,11 +36,14 @@
     height: 60px;
     line-height: 60px;
     color: $color-gray;
+    text-transform: uppercase;
+    font-size: $font-size-small;
     transition: 0.09s color;
   }
 
   .link.-active,
   .link:hover {
+    font-weight: bold;
     color: $color-black;
   }
 
