@@ -29,9 +29,6 @@ module.exports = {
       _PRODUCTION_: s(process.env.NODE_ENV === 'production'),
       _IMG_: s(process.env.IMG),
       _CDN_: s(process.env.CDN),
-      // Server-side rendering option is explicitly set to false.
-      // This is set only to true for the server.
-      _SSR_: false,
       _REDUX_DEVTOOLS_: p(process.env.REDUX_DEVTOOLS)
     })
   ]

@@ -39,7 +39,6 @@ By convention, env configs are surrounded with underscores (`_`) when used throu
 |`_IMG_`|Path to the images folder. This can be used as such : ````${_IMG_}/cat.jpg````.|
 |`_PORT_`|The port which the server will be ran. This is a server-only config.
 |`_REDUX_DEVTOOLS_`|Condition which Redux Devtools will be enabled.|
-|`_SSR_`|The variable to check if the environment is node. This is safer than deriving by checking variables available only to node. This is explicitly set to each config (e.g., server globals, webpack config).|
 
 ## Tests
 - Files are named as `filename.spec.js`.
