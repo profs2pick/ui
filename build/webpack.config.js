@@ -1,4 +1,4 @@
-require('dotenv').load({ path: __dirname + '/../.env' });
+require('dotenv-autoload');
 
 module.exports = {
   entry: './client/index.js',
