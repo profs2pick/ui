@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class MainProfessorView extends React.Component {
   render() {
@@ -12,10 +13,10 @@ class MainProfessorView extends React.Component {
             <h4 className="university">MMC-Cast</h4>
 
             <div className="form-actions">
-              <a href="#" className="btn -default">
+              <Link to="/rate" query={{ professor: 1 }} className="btn -default">
                 <i className="fa fa-plus" />
                 Submit Review
-              </a>
+              </Link>
 
               <a href="#" className="btn -default">
                 <i className="fa fa-share" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 export default class Main extends React.Component {
   render() {
@@ -23,10 +24,10 @@ export default class Main extends React.Component {
                 </form>
               </div>
 
-              <a href="#" className="btn -default">
+              <Link to="/rate" className="btn -default">
                 <i className="fa fa-plus" />
                 Submit Rating
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
