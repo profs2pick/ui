@@ -33,6 +33,19 @@ export default class Main extends React.Component {
         </nav>
 
         {this.props.children}
+
+        <footer className="footer">
+          <div className="container-fluid">
+            <p className="text">
+              Profs To Pick was made with &lt;3 by Mico, Kier, and Kirby.
+            </p>
+
+            <div className="links">
+              <a href="#">About</a>
+              <a href="#">Github</a>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }

@@ -72,9 +72,14 @@
 
 .u-clearfix {
   @include clearfix;
+}
 
-  .u-left { float: left !important;}
-  .u-right { float: right !important; }
+.u-left {
+  float: left !important;
+}
+
+.u-right {
+  float: right !important;
 }
 
 .u-ellipsis {
