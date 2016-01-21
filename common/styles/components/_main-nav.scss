@@ -63,6 +63,12 @@
     margin-left: initial;
   }
 
+  .nav .logo {
+    height: 60px;
+    // To center an image: (height + (height / 2))
+    line-height: 90px;
+  }
+
   .link {
     @include link-no-underscore;
     position: relative; // Contain the linebar (::before)
