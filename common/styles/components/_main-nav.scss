@@ -69,6 +69,7 @@
     display: block;
     padding-left: 10px;
     padding-right: 10px;
+    margin-right: 0; // Remove margin set to child elements of .nav
     height: 60px;
     line-height: 60px;
     color: $color-gray;
