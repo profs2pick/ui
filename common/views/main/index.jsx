@@ -7,7 +7,7 @@ export default class Main extends React.Component {
         <nav className="main-nav">
           <div className="container-fluid">
             <div className="nav">
-              <a href="#"><img src={`${process.env.IMG}/logo.png`} /></a>
+              <a href="#" className="logo"><img src={`${process.env.IMG}/logo.png`} /></a>
             </div>
 
             <div className="nav">
