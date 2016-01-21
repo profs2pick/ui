@@ -1,3 +1,36 @@
+/*
+ example:
+ <div>
+  <nav class="main-nav">
+    <div class="container-fluid">
+      <div class="nav">
+        <a href="#"><img src={`${process.env.IMG}/logo.png`} /></a>
+      </div>
+
+      <div class="nav">
+        <a href="#" class="link -active">Home</a>
+        <a href="#" class="link">Professors</a>
+        <a href="#" class="link">Universities</a>
+      </div>
+
+      <div class="nav">
+        <div class="searchbar">
+          <form>
+            <div class="input-group">
+              <button class="btn"><i class="fa fa-search" /></button>
+              <input type="search" class="form-control" placeholder="Search..." />
+            </div>
+          </form>
+        </div>
+
+        <a href="#" class="btn -default">
+          <i class="fa fa-plus" />
+          Submit Rating
+        </a>
+      </div>
+    </div>
+  </nav>
+*/
 .main-nav {
   height: 60px;
   background: $color-white;
