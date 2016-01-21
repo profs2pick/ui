@@ -1,9 +1,12 @@
 .main-nav {
-  display: flex;
-  align-items: center;
   height: 60px;
   background: $color-white;
   border-bottom: 1px solid $color-gray;
+
+  > .container-fluid {
+    display: flex;
+    align-items: center;
+  }
 
   .nav {
     @include clearfix;
@@ -62,10 +65,10 @@
 
   /**
    * @example
-   <div className="nav">
-    <div className="searchbar">
+   <div class="nav">
+    <div class="searchbar">
       <form>
-        <input text="search" className="form-control">
+        <input text="search" class="form-control">
       </form>
     </div>
   </div>
