@@ -18,7 +18,10 @@
   }
 
   > .attributelist > .attribute {
-    @include clearfix;
+    display: flex;
+    // Align for the table-of-contents-style dots
+    align-items: flex-end;
+    position: relative;
     margin-bottom: $spacer;
   }
 
@@ -34,14 +37,30 @@
   > .attributelist > .attribute > .score {
     margin-bottom: 0; // remove default heading margin
 
+    // Hide overlapping dots;
+    z-index: 3;
+    background: $color-white;
+
     font-weight: bold;
     text-transform: uppercase;
+    line-height: 1; // Reset line-height
   }
+
   > .attributelist > .attribute > .name {
-    float: left;
+    padding-right: 6px; // Space for the overlapping dots
   }
 
   > .attributelist > .attribute > .score {
-    float: right;
+    margin-left: auto; // Flex: to align right
+    padding-left: 6px; // Space for the overlapping dots
+  }
+
+  > .attributelist > .attribute::after {
+    content: "";
+    position: absolute;
+    bottom: 3px; // Lift a little bit
+    left: 0;
+    width: 100%;
+    border-bottom: 2px dotted $color-gray;
   }
 }
