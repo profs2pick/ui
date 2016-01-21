@@ -6,6 +6,10 @@ export default class Main extends React.Component {
       <div>
         <nav className="main-nav">
           <div className="nav">
+            <img src={`${process.env.IMG}/logo.png`} />
+          </div>
+
+          <div className="nav">
             <a href="#" className="link -active">Home</a>
             <a href="#" className="link">Professors</a>
             <a href="#" className="link">Universities</a>
